@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+h1, h2, h3, footer {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-color: #E3F2FD;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    background: url(images/wall.jpg);
+    background-position: top center;
+    color: firebrick;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.myPicture {
+    border: 10px double black;
+    border-radius: 80px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 3rem;
+    padding-left: 0;
+}
+
+.hobbies {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hobbies:nth-child(odd) {
+    background-color: lightcoral;
+}
+
+.hobbies:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+@media screen and (min-width: 600px){
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        text-align: left;
+        justify-content: center;
+    }
+}
