@@ -107,6 +107,40 @@ ul {
   background: black; /* vertikal linje */
 }
 
+.future {
+    background-color: #FCE4EC;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2rem auto;
+    
+}
+
+.subHead {
+    text-align: center;
+}
+
+.future > div {
+    margin-bottom: 3rem;
+}
+
+.future > div:last-child {
+    margin-bottom: 0;
+}
+
+.techTable {
+    border: 2px solid grey;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.techTable tr, th, td {
+    border: 1px solid grey;
+    padding: 1em;
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
 @media screen and (min-width: 600px){
     ul{
         display: grid;
