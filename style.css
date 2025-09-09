@@ -3,7 +3,7 @@
     
 }
 
-h1, h2, h3, footer {
+h1, h2, footer {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
@@ -44,7 +44,7 @@ header {
 
 ul {
     list-style-type: none;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding-left: 0;
 }
 
@@ -58,12 +58,53 @@ ul {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.hobbies:hover {
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .hobbies:nth-child(odd) {
     background-color: lightcoral;
 }
 
 .hobbies:nth-child(even) {
     background-color: lightskyblue;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 80px;
+    margin: 2rem 0;
+    background-color: #bdc8d0;
+    border-radius: 10px;
+}
+
+.timelineItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 60px;
+}
+
+.timelineYear {
+    text-align: right;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.timelineContent {
+    padding: 10px 15px;
+    
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 125px; /* mitt på årtalskolumnen */
+  width: 4px;
+  height: 95%;
+  background: black; /* vertikal linje */
 }
 
 @media screen and (min-width: 600px){
@@ -79,5 +120,28 @@ ul {
         gap: 20px;
         text-align: left;
         justify-content: center;
+    }
+
+    .timeline {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timelineItems {
+        display: contents;
+    }
+
+    .timelineYear {
+        grid-column: 1;
+    }
+
+    .timelineContent {
+        grid-column: 2;
     }
 }
