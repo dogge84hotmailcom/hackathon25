@@ -31,6 +31,29 @@ header {
     border-radius: 10px;
 }
 
+nav {
+    background-color:#8baec8;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.menu {
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: hsl(240, 80%, 50%);
+}
+
+.menu li a:hover {
+    color: hsl(240, 80%, 60%);
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -146,6 +169,12 @@ ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
     }
 
     header {
